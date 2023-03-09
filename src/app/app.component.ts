@@ -1,4 +1,5 @@
 import { Component, HostListener } from '@angular/core';
+import { Employee } from './employee';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,11 @@ export class AppComponent {
 @HostListener('click',['$event'])
   show(){
     alert('alert of hostlistner');
+  }
+  constructor(private _obj:Employee){
+    _obj.show();
+
+
   }
 
 
